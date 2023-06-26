@@ -1,0 +1,38 @@
+<dialogue>
+<node>
+	<npctext>Привет!</npctext>
+	<answers>
+		<answer tonode= "1"><text>Привет. Как тебя зовут?</text></answer>
+		<answer tonode = "2"><text>Я могу как-то помочь?</text></answer>
+		<answer dialend = "1" tonode = "0"><text>Я пойду.</text></answer>
+	</answers>
+</node>
+<node>
+	<npctext>Меня зовут Маша, но все в здесь зовут меня просто Маней.</npctext>
+	<answers>
+			<answer tonode = "0"><text>Как дела?</text></answer>
+			<answer tonode = "0"><text>Отлично</text></answer>
+			<answer dialend = "1" tonode = "0"><text>Я пойду.</text></answer>
+	</answers>
+</node>
+<node>
+	<npctext>Да! Ты бы мне очень помог, если бы принес мне ягоды теслинки.</npctext>
+		<answers>	
+			<answer tonode = "0"  dialend = "1"><text>Хорошо</text></answer>
+			<answer tonode = "4"><text>Ну, я бы хотел поговорить о моем вознаграждении.</text></answer>
+			<answer tonode = "3"><text>А что это за ягоды?</text></answer>
+		</answers>
+</node>
+<node>
+	<npctext>Ты что с неба свалился? Это любимые ягоды Перуна! Они дают силы и энергию для всех чистых истуканов.</npctext>
+		<answers>
+			<answer tonode = "0" dialend = "1"><text>Я пойду.</text></answer>
+		</answers>
+</node>
+<node>
+	<npctext>Сначала сделай дело!</npctext>
+		<answers>
+			<answer tonode = "0" dialend = "1"><text>Я пойду.</text></answer>
+		</answers>
+</node>  
+</dialogue>	
