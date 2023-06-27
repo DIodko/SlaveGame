@@ -30,12 +30,12 @@ public class MCBehaviour : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
-            if ((Input.GetKey("a")) & (Input.GetKey("w")))
+            if (Input.GetKey("a"))
             {
                 anim.SetTrigger("Walk_Left_Behind");
                 rb.velocity = new Vector2(-speed / (Mathf.Sqrt(2)), speed / (Mathf.Sqrt(2)));
             }
-            else if ((Input.GetKey("d")) & (Input.GetKey("w")))
+            else if (Input.GetKey("d"))
             {
                 anim.SetTrigger("Walk_Right_Behind");
                 rb.velocity = new Vector2(speed / (Mathf.Sqrt(2)), speed / (Mathf.Sqrt(2)));
@@ -48,12 +48,12 @@ public class MCBehaviour : MonoBehaviour
         }
         else if (Input.GetKey("s"))
         {
-            if ((Input.GetKey("a")) & (Input.GetKey("s")))
+            if (Input.GetKey("a"))
             {
                 anim.SetTrigger("Walk_Left_Forward");
                 rb.velocity = new Vector2(-speed / (Mathf.Sqrt(2)), -speed / (Mathf.Sqrt(2)));
             }
-            else if ((Input.GetKey("d")) & (Input.GetKey("s")))
+            else if (Input.GetKey("d"))
             {
                 anim.SetTrigger("Walk_Right_Forward");
                 rb.velocity = new Vector2(speed / (Mathf.Sqrt(2)), -speed / (Mathf.Sqrt(2)));
@@ -78,6 +78,8 @@ public class MCBehaviour : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
         }
+
+
         if ((Input.GetKeyUp("f")))
         {
             if (Equip_Inventory.activeInHierarchy == true)
@@ -102,10 +104,10 @@ public class MCBehaviour : MonoBehaviour
                 Bag_Inventory.SetActive(true);
             }
         }
-        if ((Input.GetKeyUp("1")))
-        {
-            inventoryScript.SpawnItem(someItem);
-        }
+        //if ((Input.GetKeyUp("1")))
+        //{
+        //    inventoryScript.SpawnItem(someItem);
+        //}
     }
     public void AddItem()
     {
